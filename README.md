@@ -9,6 +9,8 @@ Ce dossier présente une architecture moderne en **Next.js App Router**, utilisa
 - **API typée**
 
 🎯 **Objectif :** optimiser les performances en évitant les requêtes réseau répétées.
+## 📁 Structure du dossier
+
 
 src/
 ├── app/
@@ -26,3 +28,5 @@ src/
 │           └── page.tsx           # Page dynamique qui lit depuis le cache
 └── types/
     └── index.ts                   # Types globaux pour un typage centralisé
+
+
