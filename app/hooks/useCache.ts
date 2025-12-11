@@ -1,8 +1,9 @@
 // src/app/hooks/useCache.ts
 import { useEffect, useState } from "react";
 import { useCacheStore } from "../store/cacheStore";
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL 
 
-// Interface pour les données de produit (exemple)
+// Interface pour les données de produit
 interface Product {
   id: string;
   name: string;
@@ -59,7 +60,6 @@ export function useCachedData<T = any>(
     isLoading,
     error,
     isCached,
-    // Fonctions utilitaires
     refetch: async () => {
       setIsLoading(true);
       try {
@@ -77,13 +77,12 @@ export function useCachedData<T = any>(
   };
 }
 
-// Hook spécialisé pour les produits (exemple)
+// Hook spécialisé pour les produits
 export function useCachedProduct(productId: string) {
   return useCachedData<Product>({
     key: `product-${productId}`,
     fetchFn: async () => {
-      // Simuler un appel API
-      const response = await fetch(`/api/products/${productId}`);
+      const response = await fetch(`API_BASE_URL/${productId}`);
       if (!response.ok) throw new Error('Produit non trouvé');
       return response.json();
     }
