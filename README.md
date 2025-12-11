@@ -1,3 +1,9 @@
+Presque parfait !
+Il te manque juste le **bloc code Markdown** autour de l'arborescence pour qu’elle s’affiche correctement (sinon GitHub l’écrase en un paragraphe).
+
+Voici la version **totalement correcte** :
+
+```md
 # 📦 Architecture du projet — Gestion de Cache Client (Zustand + Next.js)
 
 Ce dossier présente une architecture moderne en **Next.js App Router**, utilisant :
@@ -9,8 +15,10 @@ Ce dossier présente une architecture moderne en **Next.js App Router**, utilisa
 - **API typée**
 
 🎯 **Objectif :** optimiser les performances en évitant les requêtes réseau répétées.
+
 ## 📁 Structure du dossier
 
+```
 
 src/
 ├── app/
@@ -27,6 +35,7 @@ src/
 │       └── [id]/
 │           └── page.tsx           # Page dynamique qui lit depuis le cache
 └── types/
-    └── index.ts                   # Types globaux pour un typage centralisé
+└── index.ts                   # Types globaux pour un typage centralisé
 
-
+```
+```
